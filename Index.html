@@ -20,8 +20,8 @@
         
         <script>
         // geting canvas by id c
-        var c = document.getElementById("c");
-        var ctx = c.getContext("2d");
+        let c = document.getElementById("c");
+        let ctx = c.getContext("2d");
 
         //making the canvas full screen
         c.height = window.innerHeight;
@@ -29,17 +29,17 @@
 
 
         //chinese characters - taken from the unicode charset
-        var matrix = "01";
+        let matrix = "01";
         //converting the string into an array of single characters
         matrix = matrix.split("");
 
-        var font_size = 10;
-        var columns = c.width/font_size; //number of columns for the rain
+        let font_size = 10;
+        let columns = c.width/font_size; //number of columns for the rain
         //an array of drops - one per column
-        var drops = [];
+        let drops = [];
         //x below is the x coordinate
         //1 = y co-ordinate of the drop(same for every drop initially)
-        for(var x = 0; x < columns; x++)
+        for(let x = 0; x < columns; x++)
             drops[x] = 1; 
 
         //drawing the characters
